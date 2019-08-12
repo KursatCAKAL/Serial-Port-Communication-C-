@@ -1,0 +1,4 @@
+https://forums.asp.net/t/1767179.aspx?Convert+from+a+hex+string+to+a+byte+array+in+C+
+https://stackoverflow.com/questions/74148/how-to-convert-numbers-between-hexadecimal-and-decimal
+https://stackoverflow.com/questions/2972103/how-to-convert-a-string-to-a-hex-byte-array
+https://stackoverflow.com/questions/7466519/sending-hex-values-over-a-packet-in-c-sharp
