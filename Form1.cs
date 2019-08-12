@@ -15,6 +15,7 @@ namespace DynamicDecimalToHex
     {
         SerialPort myPort;
         byte[] data;
+        internal System.Windows.Forms.TrackBar trackBar1;
         public Form1()
         {
             InitializeComponent();
@@ -69,8 +70,20 @@ namespace DynamicDecimalToHex
         private void Form1_Load(object sender, EventArgs e)
         {
             myPort = serialPort1;
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            trackBar1.Location = new System.Drawing.Point(75, 30);
+            trackBar1.TickStyle = TickStyle.TopLeft;  
+            trackBar1.Minimum = 10;
+            trackBar1.Maximum = 100;
+            trackBar1.TickFrequency = 10;
+            trackBar1.ValueChanged += TrackBar1_ValueChanged;
+            this.Controls.Add(this.trackBar1);
 
-            
+        }
+
+        private void TrackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            labelDecimalValue.Text = trackBar1.Value.ToString();
         }
 
         private void btnConvert_Click(object sender, EventArgs e)
